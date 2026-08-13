@@ -1,5 +1,6 @@
 package com.example.aispringboot.common;
 
+import com.example.aispringboot.dto.response.UserLoginResponseDTO;
 import lombok.Data;
 
 /**
