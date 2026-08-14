@@ -77,9 +77,9 @@ public class User {
 //    /**
 //     * 是否为普通用户
 //     */
-//    public boolean isUser() {
-//        return UserType.USER.getCode().equals(this.userType);
-//    }
+    public boolean isUser() {
+        return UserType.USER.getCode().equals(this.userType);
+    }
 
     /**
      * 是否为正常状态
@@ -91,9 +91,9 @@ public class User {
 //    /**
 //     * 是否被禁用
 //     */
-//    public boolean isDisabled() {
-//        return UserStatus.DISABLED.getCode().equals(this.status);
-//    }
+    public boolean isDisabled() {
+        return UserStatus.DISABLED.getCode().equals(this.status);
+    }
 //
     /**
      * 获取显示名称（优先显示昵称，否则显示用户名）

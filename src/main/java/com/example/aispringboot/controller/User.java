@@ -18,14 +18,9 @@ public class User {
     // 登录接口
     @PostMapping("/login")
     public Result<UserLoginResponseDTO> login(@Valid @RequestBody UserLoginCommandDTO commandDTO) {
-        System.out.println(commandDTO.getUsername());
-        System.out.println(commandDTO.getPassword());
+        UserLoginResponseDTO result = userService.login(commandDTO);
 
-        // 调用服务层登录方法
-        Result<UserLoginResponseDTO> result = userService.login(commandDTO);
-        System.out.println(result);
-
-        return result;
+        return Result.ok(result);
     }
 
 }
