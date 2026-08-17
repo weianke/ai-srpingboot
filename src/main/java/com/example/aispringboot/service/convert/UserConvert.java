@@ -1,6 +1,5 @@
 package com.example.aispringboot.service.convert;
-
-//import com.example.aispringboot.dto.command.UserRegisterCommandDTO;
+import com.example.aispringboot.dto.command.UserRegisterCommandDTO;
 import com.example.aispringboot.dto.response.UserLoginResponseDTO;
 import com.example.aispringboot.entity.User;
 import com.example.aispringboot.enumClass.UserStatus;
@@ -38,21 +37,21 @@ public class UserConvert {
                 .build();
     }
 
-//    public static User registerCommandToEntity(UserRegisterCommandDTO commandDTO, String encodedPassword) {
-//        return User.builder()
-//                .username(commandDTO.getUsername())
-//                .email(commandDTO.getEmail())
-//                .password(encodedPassword)
-//                .nickname(commandDTO.getNickname())
-//                .phone(commandDTO.getPhone())
-//                .gender(commandDTO.getGender())
-//                .birthday(commandDTO.getBirthday())
-//                .userType(commandDTO.getUserType())
-//                .status(UserStatus.NORMAL.getCode())
-//                .createdAt(LocalDateTime.now())
-//                .updatedAt(LocalDateTime.now())
-//                .build();
-//    }
+    public static User registerCommandToEntity(UserRegisterCommandDTO commandDTO, String encodedPassword) {
+        return User.builder()
+                .username(commandDTO.getUsername())
+                .email(commandDTO.getEmail())
+                .password(encodedPassword)
+                .nickname(commandDTO.getNickname())
+                .phone(commandDTO.getPhone())
+                .gender(commandDTO.getGender())
+                .birthday(commandDTO.getBirthday())
+                .userType(commandDTO.getUserType())
+                .status(UserStatus.NORMAL.getCode())
+                .createdAt(LocalDateTime.now())
+                .updatedAt(LocalDateTime.now())
+                .build();
+    }
 
     /**
      * 获取性别显示名称

@@ -2,6 +2,7 @@ package com.example.aispringboot.controller;
 
 import com.example.aispringboot.common.Result;
 import com.example.aispringboot.dto.command.UserLoginCommandDTO;
+import com.example.aispringboot.dto.command.UserRegisterCommandDTO;
 import com.example.aispringboot.dto.response.UserLoginResponseDTO;
 import com.example.aispringboot.service.UserService;
 import jakarta.annotation.Resource;
@@ -19,6 +20,14 @@ public class User {
     @PostMapping("/login")
     public Result<UserLoginResponseDTO> login(@Valid @RequestBody UserLoginCommandDTO commandDTO) {
         UserLoginResponseDTO result = userService.login(commandDTO);
+
+        return Result.ok(result);
+    }
+
+    // 注册接口
+    @PostMapping("/add")
+    public Result<UserLoginResponseDTO.UserDetailResponseDTO> register(@Valid @RequestBody UserRegisterCommandDTO commandDTO) {
+        UserLoginResponseDTO.UserDetailResponseDTO result = userService.register(commandDTO);
 
         return Result.ok(result);
     }
