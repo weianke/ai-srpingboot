@@ -27,7 +27,7 @@ public class PsychologicalChat {
         Long userId = jwt.getClaim("userId").asLong();
 
         // 调用服务层创建会话
-        psychologicalSupportService.startSession(userId, createDTO);
-        return null;
+        StructOutPut.StreamChatSession session = psychologicalSupportService.startSession(userId, createDTO);
+        return Result.ok(session);
     }
 }

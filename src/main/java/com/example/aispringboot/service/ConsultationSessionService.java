@@ -23,7 +23,7 @@ public class ConsultationSessionService {
     @Autowired
     private ConsultationSessionMapper consultationSessionMapper;
 
-    public ConsultationSession StartSession(Long userId, ConsultationSessionCreateDTO createDTO) {
+    public ConsultationSession createSession(Long userId, ConsultationSessionCreateDTO createDTO) {
         // 验证用户是否存在
         User user = userMapper.selectById(userId);
 
